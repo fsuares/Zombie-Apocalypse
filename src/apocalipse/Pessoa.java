@@ -3,7 +3,6 @@
 
 package apocalipse;
 
-import java.util.Random;
 
 /**
  *
@@ -11,7 +10,7 @@ import java.util.Random;
  */
 public class Pessoa {
     private int x, y;
-    private int cor;
+    private int color;
     private int z;
 
     public int getX() {
@@ -30,31 +29,20 @@ public class Pessoa {
         this.y = y;
     }
 
-    public int getCor() {
-        return this.cor;
+    public int getColor() {
+        return this.color;
     }
 
-    public void setCor(int cor) {
-        this.cor = cor;
+    public void setColor(int cor) {
+        this.color = color;
     }
     
-    Random r = new Random();
-    
-    public void mover(){
-        z = r.nextInt(4);
-        
-        if ( z == 0 )
-            this.setX( this.getX() + 1 );
-        
-        if ( z == 1)
-            this.setX( this.getX() - 1 );
-        
-        if ( z == 2)
-            this.setX( this.getY() + 1 );
-        
-        else
-            this.setY( this.getY() - 1);
+    public Pessoa(int x, int y, int color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
     }
+    
 }
 
 
